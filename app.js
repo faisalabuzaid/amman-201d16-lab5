@@ -101,6 +101,10 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) {
+  let total=1;
+  for(let i=0;i<testArray.length;i++){
+    total =total*testArray[i];
+  } return [total,'The numbers '+testArray[0]+','+testArray[1]+','+testArray[2]+' have a product of '+total+'.']
   //eslint-disable-line
 }
 
