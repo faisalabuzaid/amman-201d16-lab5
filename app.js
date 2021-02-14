@@ -76,10 +76,10 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) {
-  let sum=0;
+  let newSum=0;
   for(let i=0;i<testArray.length;i++){
-    sum=sum+testArray[i];
-  }     return [sum,testArray[0]+','+testArray[1]+','+testArray[2]+' was passed in as an array of numbers, and '+sum+' is their sum.']
+    newSum=sum(newSum,testArray[i])[0];
+  }     return [newSum,testArray[0]+','+testArray[1]+','+testArray[2]+' was passed in as an array of numbers, and '+newSum+' is their sum.']
   //eslint-disable-line
 }
 
