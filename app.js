@@ -51,9 +51,9 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
-  let sum=a+b+c;
-  let multiply=a*b*c;
-  return [sum,multiply,a+' and '+b+' and '+c+' sum to '+sum+'.','The product of '+a+' and '+b+' and '+c+' is '+multiply+'.']
+  let totalSum=sum(a,sum(b,c)[0])[0];
+  let totalMultiply=multiply(a,multiply(b,c)[0])[0];
+  return [totalSum,totalMultiply,a+' and '+b+' and '+c+' sum to '+totalSum+'.','The product of '+a+' and '+b+' and '+c+' is '+totalMultiply+'.']
   //eslint-disable-line
 }
 
@@ -135,7 +135,7 @@ let testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
 function multiplyAnyArray(dynamicArray) {
   var sum=1;
     for (let i=0; i<testDynamicArray.length; i++) {
-        sum = sum * testDynamicArray[i];
+        sum = multiplysum * testDynamicArray[i];
       }
   return [sum,'The numbers '+testDynamicArray[0]+','+testDynamicArray[1]+','+testDynamicArray[2]+','+testDynamicArray[3]+','+testDynamicArray[4]+' have a product of '+sum+'.']
   //eslint-disable-line
