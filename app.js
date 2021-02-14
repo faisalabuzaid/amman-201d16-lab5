@@ -51,9 +51,9 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
-  let sum=a+b+c;
-  let multiply=a*b*c;
-  return [sum,multiply,a+' and '+b+' and '+c+' sum to '+sum+'.','The product of '+a+' and '+b+' and '+c+' is '+multiply+'.']
+  let totalSum=sum(a,sum(b,c)[0])[0];
+  let totalMultiply=multiply(a,multiply(b,c)[0])[0];
+  return [totalSum,totalMultiply,a+' and '+b+' and '+c+' sum to '+totalSum+'.','The product of '+a+' and '+b+' and '+c+' is '+totalMultiply+'.']
   //eslint-disable-line
 }
 
@@ -76,10 +76,10 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) {
-  let sum=0;
+  let newSum=0;
   for(let i=0;i<testArray.length;i++){
-    sum=sum+testArray[i];
-  }     return [sum,testArray[0]+','+testArray[1]+','+testArray[2]+' was passed in as an array of numbers, and '+sum+' is their sum.']
+    newSum=sum(newSum,testArray[i])[0];
+  }     return [newSum,testArray[0]+','+testArray[1]+','+testArray[2]+' was passed in as an array of numbers, and '+newSum+' is their sum.']
   //eslint-disable-line
 }
 
