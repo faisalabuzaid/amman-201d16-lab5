@@ -137,7 +137,6 @@ function multiplyAnyArray(dynamicArray) {
     for (let i=0; i<testDynamicArray.length; i++){
         newSum = multiply(testDynamicArray[i],newSum)[0];
         console.log(newSum);
-        sum = multiplysum * testDynamicArray[i];
       }
   return [newSum,'The numbers '+testDynamicArray[0]+','+testDynamicArray[1]+','+testDynamicArray[2]+','+testDynamicArray[3]+','+testDynamicArray[4]+' have a product of '+newSum+'.']
   //eslint-disable-line
