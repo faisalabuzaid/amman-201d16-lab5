@@ -76,10 +76,10 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) {
-  let sum=0;
+  let newSum=0;
   for(let i=0;i<testArray.length;i++){
-    sum=sum+testArray[i];
-  }     return [sum,testArray[0]+','+testArray[1]+','+testArray[2]+' was passed in as an array of numbers, and '+sum+' is their sum.']
+    newSum=sum(newSum,testArray[i])[0];
+  }     return [newSum,testArray[0]+','+testArray[1]+','+testArray[2]+' was passed in as an array of numbers, and '+newSum+' is their sum.']
   //eslint-disable-line
 }
 
@@ -101,10 +101,10 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) {
-  let total=1;
+  let newTotal=1;
   for(let i=0;i<testArray.length;i++){
-    total =total*testArray[i];
-  } return [total,'The numbers '+testArray[0]+','+testArray[1]+','+testArray[2]+' have a product of '+total+'.']
+    newTotal =multiply(newTotal,testArray[i])[0];
+  } return [newTotal,'The numbers '+testArray[0]+','+testArray[1]+','+testArray[2]+' have a product of '+newTotal+'.']
   //eslint-disable-line
 }
 
@@ -133,11 +133,12 @@ Test this function by hand in the console to get it working, and when you think 
 let testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) {
-  var sum=1;
+  let newSum=1;
     for (let i=0; i<testDynamicArray.length; i++) {
-        sum = sum * testDynamicArray[i];
+        newSum = multiply(testDynamicArray[i],newSum)[0];
+        console.log(newSum);
       }
-  return [sum,'The numbers '+testDynamicArray[0]+','+testDynamicArray[1]+','+testDynamicArray[2]+','+testDynamicArray[3]+','+testDynamicArray[4]+' have a product of '+sum+'.']
+  return [newSum,'The numbers '+testDynamicArray[0]+','+testDynamicArray[1]+','+testDynamicArray[2]+','+testDynamicArray[3]+','+testDynamicArray[4]+' have a product of '+newSum+'.']
   //eslint-disable-line
 }
 
